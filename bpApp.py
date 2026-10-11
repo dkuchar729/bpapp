@@ -20,11 +20,11 @@ with st.form("inputForm",border=False):
 
     with col1:
         maxSpeed = st.slider("Maximální rychlost", min_value=10, max_value=130, value=90, step=5)
-        probeCount = st.number_input("Počet sond", min_value=0, max_value=20000, value=100, step=1)
+        probeCount = st.number_input("Počet sond", min_value=0, max_value=20000, value=100, step=100)
         
 
     with col2:
-        segmentLength = st.number_input("Délka úseku", min_value=1, max_value=20000, value=1000, step=1)
+        segmentLength = st.number_input("Délka úseku", min_value=1, max_value=20000, value=1000, step=100)
     submitButton = st.form_submit_button("Provést predikci",type="primary")
 inputData=[[maxSpeed,segmentLength,probeCount]]
 
