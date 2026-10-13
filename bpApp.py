@@ -2,14 +2,15 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 import joblib
-
+from xgboost import XGBRegressor
 st.set_page_config(layout="wide")
 
 #------------------- data and model part
 
 dfClusters = pd.read_csv("clusters.csv", sep=';')
-      
-model=joblib.load('rfAccidentCount.pkl') 
+
+model = XGBRegressor()
+model.load_model("xgboostAccidentCount.json")
 
 #------------------- model input part
 
