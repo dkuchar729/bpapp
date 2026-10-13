@@ -6,3 +6,4 @@ scikit-learn==1.9.0
 scipy==1.18.0
 streamlit==1.65.0
 streamlit-geolocation==0.0.10
+xgboost==3.4.1
