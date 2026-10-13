@@ -1,16 +1,17 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-import joblib
-from xgboost import XGBRegressor
+from catboost import CatBoostRegressor
+
 st.set_page_config(layout="wide")
 
 #------------------- data and model part
 
 dfClusters = pd.read_csv("clusters.csv", sep=';')
 
+model = CatBoostRegressor()
+model.load_model("catboostAccidentCount.cbm")
 
-model = joblib.load("catboostAccidentCount.joblib")
 #------------------- model input part
 
 st.title("Predikce počtu nehod")
