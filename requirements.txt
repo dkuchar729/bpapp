@@ -7,3 +7,4 @@ scipy==1.18.0
 streamlit==1.65.0
 streamlit-geolocation==0.0.10
 xgboost==3.4.1
+catboost==1.2.10
