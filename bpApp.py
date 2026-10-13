@@ -9,9 +9,8 @@ st.set_page_config(layout="wide")
 
 dfClusters = pd.read_csv("clusters.csv", sep=';')
 
-model = XGBRegressor()
-model.load_model("xgboostAccidentCount.json")
 
+model = joblib.load("catboostAccidentCount.joblib")
 #------------------- model input part
 
 st.title("Predikce počtu nehod")
